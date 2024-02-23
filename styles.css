@@ -4,44 +4,53 @@
     box-sizing: border-box;
 }
 
-html,
-body {
+body,
+html {
     height: 100%;
-    background-size: cover;
-    background-position: center;
-    font-family: "Kalam", cursive;
 }
 
 header,
 footer {
     height: 100px;
     font-size: 150%;
-    background-color: #ffffffb7;
-    color: #000000;
+    background-color: #000;
+    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.main-content {
+main {
+    height: calc(100% - 200px);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100% - 200px);
+}
+
+.page {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .overlay {
-    width: 80%;
-    height: 80%;
-    background: rgba(255, 255, 255, 0.13);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), 0 0 20px 0 rgb(240, 165, 224);
-    backdrop-filter: blur(3.1px);
-    -webkit-backdrop-filter: blur(3.1px);
-    border: 1px solid rgba(245, 209, 240, 0.849);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(2.0px);
 }
 
 .content {
@@ -50,18 +59,19 @@ footer {
     left: 50%;
     transform: translate(-50%, -50%);
     font-weight: 500;
-    font-size: 120%;
+    font-size: 150%;
     text-align: center;
-    color: #000000;
+    color: #000;
 }
 
 button {
     padding: 4% 8%;
     margin: 2%;
-    border: 2px solid #000000;
+    margin-top: 10%;
+    border: 2px solid #000;
     border-radius: 20px;
-    background-color: #fdfdfd00;
-    color: #000000;
+    background-color: transparent;
+    color: #000;
     font-size: 100%;
     font-weight: 600;
     cursor: pointer;
@@ -69,6 +79,6 @@ button {
 }
 
 button:hover {
-    background-color: #000000;
+    background-color: #000;
     color: #fff;
 }
